@@ -39,7 +39,7 @@ function Install-PowerShellModule {
 Install-Chocolatey
 
 Install-FromChocolatey 'git'
-Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/nadirbad/system-init/master/.gitconfig' -OutFile (Join-Path $env:USERPROFILE '.gitconfig')
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/nadirbad/system-init/main/.gitconfig' -OutFile (Join-Path $env:USERPROFILE '.gitconfig')
 
 Install-FromChocolatey 'vscode'
 Install-FromChocolatey 'dotnetcore-sdk'
@@ -59,4 +59,4 @@ Install-PowerShellModule 'nvm' {
     Set-NodeVersion -Persist User latest
 }
 
-Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/nadirbad/system-init/master/Microsoft.PowerShell_profile.ps1' -OutFile $PROFILE
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/nadirbad/system-init/main/Microsoft.PowerShell_profile.ps1' -OutFile $PROFILE
